@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+
     .font-bebas-neue {
         font-family: "Bebas Neue", sans-serif;
     }
@@ -21,17 +22,25 @@
 </head>
 <body class="font-roboto ">
 
-    <header class="bg-[#FFFBF0] pl-4">
+    <header class="bg-[#FFFBF0] px-4 md:px-0">
 
         <!-- nav bar section start  -->
         <nav >
-            <div class="md:flex md:items-center md:justify-between pt-8 max-w-7xl mx-auto ">
-                <div class="w-100">
+            <div class="flex items-center justify-between gap-5 pt-8 max-w-7xl mx-auto">
+                <div class="w-60 md:w-100">
                     <img src="icons/logo.png" alt="logoss">
                 </div>
 
-                <div>
-                    <ul class="flex gap-x-10 text-[#3C3C3C] font-medium font-roboto text-1xl">
+                <div class="md:hidden">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#3C3C3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hidden md:block">
+                    <ul class="flex gap-4 md:gap-x-10 text-[#3C3C3C] font-medium text-1xl">
                         <li>Home</li>
                         <li>Product</li>
                         <li>About us</li>
@@ -42,9 +51,9 @@
         </nav>
 
         <!-- banner section start  -->
-        <div class="md:flex md:items-center gap-60 pt-10 pb-30 max-w-7xl mx-auto">
+        <div class="md:flex md:items-center gap-10 md:gap-60 pt-10 pb-20 max-w-7xl mx-auto">
             <div>
-                <h1 class="text-7xl uppercase font-bebas-neue leading-20"><span class="text-[#FABE4C] font-regular">Be the Penguins</span><br> <span class="text-[#363958] font-regular">of Winter</span></h1>
+                <h1 class="text-4xl md:text-7xl uppercase font-bebas-neue leading-tight md:leading-20"><span class="text-[#FABE4C] font-regular">Be the Penguins</span><br> <span class="text-[#363958] font-regular">of Winter</span></h1>
                 <p class="pb-5">Lorem Ipsum is simply dummy text of the printing <br>and typesetting industry.</p>
                 <button class="py-4 px-8 rounded-xl font-medium text-white bg-gradient-to-r from-[#85a015] to-[#85a019]"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white inline">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
@@ -54,7 +63,7 @@
             </div>
 
             <div>
-                <img src="images/model.png" alt="model">
+                <img class="w-full max-w-md mx-auto" src="images/model.png" alt="model">
             </div>
 
         </div>
@@ -64,7 +73,7 @@
     <main class="max-w-7xl mx-auto">
         <!-- women jackect section  -->
          <section class="my-12">
-            <h3 class="text-5xl uppercase text-[#363958] font-bebas-neue pb-10 pt-15">Woman jacket</h3>
+            <h3 class="text-5xl uppercase text-[#363958] font-bebas-neue pb-10 pt-15 text-center md:text-left">Woman jacket</h3>
             
             <!-- jacket card container  -->
              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -116,7 +125,7 @@
 
          <!-- man jackect section  -->
          <section class="my-12">
-            <h3 class="text-5xl uppercase text-[#363958] font-bebas-neue pb-20 pt-20">man jacket</h3>
+            <h3 class="text-5xl uppercase text-[#363958] font-bebas-neue pb-20 pt-20 text-center md:text-left">man jacket</h3>
             
             <!-- jacket card container  -->
              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -168,9 +177,11 @@
 
     </main>
 
-    <footer class="grid md:grid-cols-2 gap-30 items-center max-w-7xl mx-auto my-12 py-16">
+    <!-- footer section start  -->
+
+    <footer class="flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:gap-30 items-center max-w-7xl mx-auto my-12 py-16 px-4">
         <div>
-            <div class="flex items-start gap-4 bg-white p-5 rounded-xl drop-shadow-sm  mb-6">
+            <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 bg-white p-5 rounded-xl drop-shadow-sm mb-6">
                 <div class="w-18 h-18 object-contain">
                     <img src="icons/house.png" alt="">
                 </div>
@@ -180,7 +191,7 @@
                 </div>
             </div>
 
-            <div class="flex items-start gap-4 bg-white p-5 rounded-xl drop-shadow-sm  mb-6">
+            <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 bg-white p-5 rounded-xl drop-shadow-sm mb-6">
                 <div class="w-14 h-14 object-contain">
                     <img src="icons/box.png" alt="">
                 </div>
@@ -190,7 +201,7 @@
                 </div>
             </div>
 
-            <div class="flex items-start gap-4 bg-white p-5 rounded-xl drop-shadow-sm ">
+            <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 bg-white p-5 rounded-xl drop-shadow-sm mb-6">
                 <div class="w-14 h-14 object-contain">
                     <img src="icons/question.png" alt="">
                 </div>
@@ -201,11 +212,15 @@
             </div>
         </div>
             
-        <div class="fot-img">
+        <div>
             <img src="images/shopping.png" alt="">
         </div>
     </footer>
 
 </body>
 </html>
+
+
+
+
 
